@@ -15,7 +15,32 @@ The format was created with following goals:
 
 ## **Example `.tear` File**
 ```plaintext
-TODO
+#tear
+index.html/t
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Some web page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Bulbalka Red</p>
+  </body>
+</html>
+/@
+
+style.css/t
+html, body {
+  color-scheme: dark light;
+}
+/@
+
+host.sh/s
+#!/bin/sh
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+python3 -m http.server -d "$SCRIPT_DIR" 8000
+/@
 ```
 
 ## **Tools & Libraries**
