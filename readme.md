@@ -14,9 +14,9 @@ The format was created with following goals:
 - diff nicely in git history and code reviews.
 
 ## **Example `.tear` File**
-```plaintext
-#tear
-index.html/t
+```shell
+#!/usr/bin/env tear
+=index.html/t
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -28,19 +28,19 @@ index.html/t
     <p>Bulbalka Red</p>
   </body>
 </html>
-/@
+=@
 
-style.css/t
+=style.css/t
 html, body {
   color-scheme: dark light;
 }
-/@
+=@
 
-host.sh/s
+=server.sh/s
 #!/bin/sh
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 python3 -m http.server -d "$SCRIPT_DIR" 8000
-/@
+=@
 ```
 
 ## **Tools & Libraries**
