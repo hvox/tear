@@ -58,4 +58,7 @@ TODO
 TODO
 
 ## **Alternatives**
-There is txtar, which is far simpler format with similar goals. It can't store symbolic links, file modes, filenames with spaces and other exotic things, but it is easier to read and edit manually. Also it has good support by many libraries for different programming languages.
+There is txtar, which is far simpler format with similar goals. It can't store symbolic links, file modes, filenames with spaces and other exotic things, but it is easier to read and edit manually. Also it has good support by many libraries for different programming languages. 
+[txtar golang package](https://pkg.go.dev/golang.org/x/tools/txtar) 
+[txtar Rust crate](https://crates.io/crates/txtar) 
+[txtar Zig package](https://abhinav.github.io/txtar.zig/)
